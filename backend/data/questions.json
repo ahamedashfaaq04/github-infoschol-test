@@ -1,7 +1,0 @@
-[
-  { "id": 1, "q": "What is the capital of France?", "options": ["Paris", "Rome", "Madrid", "Berlin"], "a": 0 },
-  { "id": 2, "q": "Which planet is known as the Red Planet?", "options": ["Earth", "Venus", "Mars", "Jupiter"], "a": 2 },
-  { "id": 3, "q": "Who wrote 'Romeo and Juliet'?", "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"], "a": 1 },
-  { "id": 4, "q": "What gas do plants absorb from the atmosphere?", "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], "a": 2 },
-  { "id": 5, "q": "What is 7 × 8?", "options": ["54", "56", "58", "64"], "a": 1 }
-]
