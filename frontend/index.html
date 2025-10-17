@@ -1,20 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Platform</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Quiz — Dark Mode</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <div id="quiz-container">
-        <h1>Welcome to the Quiz Platform</h1>
-        <div id="question"></div>
-        <div id="answers"></div>
-        <button id="next-button" style="display: none;">Next</button>
-    </div>
-    <script src="js/utils.js"></script>
-    <script src="js/quiz.js"></script>
-    <script src="js/app.js"></script>
+  <main class="app">
+    <header class="app-header">
+      <h1>General Knowledge Quiz</h1>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">Light</button>
+    </header>
+
+    <section id="quiz" class="quiz">
+      <div id="questionCard" class="card">
+        <div id="questionNumber" class="meta"></div>
+        <h2 id="questionText" class="question"></h2>
+        <div id="answers" class="answers"></div>
+      </div>
+
+      <div class="controls">
+        <button id="nextBtn" class="btn" disabled>Next</button>
+        <button id="restartBtn" class="btn secondary">Restart</button>
+      </div>
+
+      <div id="result" class="result hidden">
+        <h2>Your score</h2>
+        <p id="scoreText"></p>
+      </div>
+    </section>
+
+    <footer class="app-footer">Built with HTML · CSS · JS — Dark Mode</footer>
+  </main>
+
+  <!-- questions JSON is loaded from backend/data/questions.json -->
+  <script src="js/app.js"></script>
 </body>
 </html>
