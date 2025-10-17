@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+    background: linear-gradient(120deg, #4b6cff 0%, #7aa0ff 100%);
+    margin: 0;
+    min-height: 100vh;
+}
+.quiz-container {
+    max-width: 480px;
+    margin: 48px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(75,108,255,0.12);
+    padding: 32px 24px 24px 24px;
+    position: relative;
+}
+h1 {
+    text-align: center;
+    color: #4b6cff;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+.question-container {
+    background: #f7fbff;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    padding: 18px 16px;
+    box-shadow: 0 2px 8px rgba(75,108,255,0.04);
+}
+h2 {
+    font-size: 1.1rem;
+    color: #4b6cff;
+    margin-bottom: 8px;
+}
+p {
+    color: #333;
+    margin-bottom: 12px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.option {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #e6eefb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.option:hover, .option input[type="radio"]:focus + span {
+    border-color: #4b6cff;
+    box-shadow: 0 2px 8px rgba(75,108,255,0.08);
+}
+.option input[type="radio"] {
+    accent-color: #4b6cff;
+    margin-right: 12px;
+    transform: scale(1.2);
+}
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #4b6cff 60%, #7aa0ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 2px 8px rgba(75,108,255,0.10);
+    transition: background 0.2s;
+}
+.submit-btn:hover {
+    background: linear-gradient(90deg, #7aa0ff 0%, #4b6cff 100%);
+}
+.results {
+    display: none;
+    margin-top: 18px;
+    padding: 14px;
+    background: #e8f0fe;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #4b6cff;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(75,108,255,0.06);
+}
+@media (max-width: 600px) {
+    .quiz-container {
+        max-width: 98vw;
+        margin: 16px;
+        padding: 16px 8px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .question-container {
+        padding: 10px 6px;
+    }
+    .option {
+        padding: 8px 6px;
+    }
+}
