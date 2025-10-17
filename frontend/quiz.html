@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Feedback Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Community Feedback Quiz</h1>
+        <div id="quiz">
+            <div class="question-container">
+                <h2>Question 1:</h2>
+                <p>What is the primary purpose of a community feedback system?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="a">
+                        <span>To collect opinions and suggestions from community members</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="b">
+                        <span>To post announcements</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="c">
+                        <span>To share photos</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2>Question 2:</h2>
+                <p>Which of these is a benefit of gathering community feedback?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="a">
+                        <span>Improved decision making</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="b">
+                        <span>Better resource allocation</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="c">
+                        <span>Both A and B</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2>Question 3:</h2>
+                <p>What makes feedback effective?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="a">
+                        <span>It is specific and actionable</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="b">
+                        <span>It is timely and relevant</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="c">
+                        <span>All of the above</span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="submit" class="submit-btn">Submit Quiz</button>
+            <div id="results" class="results"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            const answers = {q1: 'a', q2: 'c', q3: 'c'};
+            let score = 0;
+            let total = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const results = document.getElementById('results');
+            results.innerHTML = `You got ${score} out of ${total} correct!`;
+            results.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Feedback Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Community Feedback Quiz</h1>
+        <div id="quiz">
+            <div class="question-container">
+                <h2>Question 1:</h2>
+                <p>What is the primary purpose of a community feedback system?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q1" value="a">
+                        <span>To collect opinions and suggestions from community members</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="b">
+                        <span>To post announcements</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="c">
+                        <span>To share photos</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2>Question 2:</h2>
+                <p>Which of these is a benefit of gathering community feedback?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q2" value="a">
+                        <span>Improved decision making</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="b">
+                        <span>Better resource allocation</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="c">
+                        <span>Both A and B</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2>Question 3:</h2>
+                <p>What makes feedback effective?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="q3" value="a">
+                        <span>It is specific and actionable</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="b">
+                        <span>It is timely and relevant</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="c">
+                        <span>All of the above</span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="submit" class="submit-btn">Submit Quiz</button>
+            <div id="results" class="results"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            const answers = {q1: 'a', q2: 'c', q3: 'c'};
+            let score = 0;
+            let total = Object.keys(answers).length;
+
+            for (let question in answers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            const results = document.getElementById('results');
+            results.innerHTML = `You got ${score} out of ${total} correct!`;
+            results.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
